@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+    
+    </head>
+    <style>
+        body{
+            width: 100%;
+            align-items: center;
+            align-content: center;
+            align-self: center;
+            
+        }
+        .container{
+            background: rgba(0,0,0,0.5);
+            border:2px solid gray;
+            align-content: center;
+            
+        }
+        input[type=text]{
+            background-color: lightgray;
+            border: 3.5px solid black;
+            height:48px;
+            font-size: 20px;
+            width:70%
+            
+            visibility: visible;
+        
+        }
+        button{
+            width:25%;
+            height:36px;
+            font-size: 18px;
+            margin: 0px;
+            float: left;
+            border: 2px solid gray;
+            cursor:pointer;
+            
+        }
+        button:hover{
+            box-shadow: 0 5px;
+            transform:translate(4px);
+        }
+        #btn0,#btn1,#btn2,#btn3,#btn4,#btn5,#btn6,#btn7,#btn8,#btn9,#btndot{
+            background-color: lightgreen;
+            color: brown;
+        }
+        #btneql,#btnclr{
+            background-color: darkgreen;
+            color:white;
+            
+        }
+        #btnadd,#btnsub,#btnmul,#btndiv{
+            background-color: black;
+            color:red;
+        }
+        .res{
+          width: 70%;  
+        }
+        
+        
+        
+    
+    </style>
+    <script>
+    
+    function dis(val){
+        document.getElementById("res").value+=val;
+    }
+         function equal() 
+         { 
+             let x = document.getElementById("res").value 
+             let y = eval(x) 
+             document.getElementById("res").value = y 
+         } 
+        function clr(){
+            document.getElementById("res").value = "" 
+        }
+    
+    
+    </script>
+
+
+
+<body>
+
+    <table>
+        <tr>
+    <td colspan="4"><input type="text" id="res">
+            </td>
+            <td>
+            <button id="btnclr" value="C" onclick="clr()" style="width:  100%" >C</button>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+            <button id="btn1" value="1" onclick="dis('1')" >1</button>
+                 <button id="btn2" value="2" onclick="dis('2')" >2</button>
+                <button id="btn3" value="3" onclick="dis('3')" >3</button>
+                
+                <button id="btnadd" value="+" onclick="dis('+')">+</button>
+        </td>
+            
+            
+        
+        
+        
+        </tr>
+        <tr>
+            <td>
+            <button id="btn4" value="4" onclick="dis('4')" >4</button>
+                 <button id="btn5" value="5" onclick="dis('5')" >5</button>
+                <button id="btn6" value="6" onclick="dis('6')" >6</button>
+                
+                <button id="btnsub" value="-" onclick="dis('-')">-</button>
+        </td>
+        
+        
+        
+        
+        
+        </tr>
+        <tr>
+             <td>
+            <button id="btn7" value="7" onclick="dis('7')" >7</button>
+                 <button id="btn8" value="8" onclick="dis('8')" >8</button>
+                <button id="btn9" value="9" onclick="dis('9')" >9</button>
+                
+                <button id="btnmul" value="*" onclick="dis('*')">*</button>
+        </td>
+        
+        
+        
+        
+        
+        
+        </tr>
+        <tr>
+             <td>
+            <button id="btneql" value="C" onclick="equal()" >=</button>
+                 <button id="btn0" value="0" onclick="dis('0')" >0</button>
+                <button id="btndot" value="." onclick="dis('.')" >.</button>
+                
+                <button id="btndiv" value="/" onclick="dis('/')">/</button>
+        </td>
+        
+        
+        
+        
+        
+        
+        </tr>
+    
+    
+    
+    
+    
+    
+    </table>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+</body>
+    </html>
